@@ -15,21 +15,7 @@ where continent is not null
 --Group By date
 order by 1,2
 
--- Just a double check based off the data provided
--- numbers are extremely close so we will keep them - The Second includes "International"  Location
 
-
---Select SUM(new_cases) as total_cases, SUM(cast(new_deaths as int)) as total_deaths, SUM(cast(new_deaths as int))/SUM(New_Cases)*100 as DeathPercentage
---From PortfolioProject..CovidDeaths
-----Where location like '%states%'
---where location = 'World'
-----Group By date
---order by 1,2
-
-
--- 2. 
-
--- We take these out as they are not inluded in the above queries and want to stay consistent
 -- European Union is part of Europe
 
 Select location, SUM(cast(new_deaths as int)) as TotalDeathCount
@@ -70,11 +56,7 @@ order by PercentPopulationInfected desc
 
 
 
--- Queries I originally had, but excluded some because it created too long of video
--- Here only in case you want to check them out
 
-
--- 1.
 
 Select dea.continent, dea.location, dea.date, dea.population
 , MAX(vac.total_vaccinations) as RollingPeopleVaccinated
@@ -103,12 +85,7 @@ order by 1,2
 -- numbers are extremely close so we will keep them - The Second includes "International"  Location
 
 
---Select SUM(new_cases) as total_cases, SUM(cast(new_deaths as int)) as total_deaths, SUM(cast(new_deaths as int))/SUM(New_Cases)*100 as DeathPercentage
---From PortfolioProject..CovidDeaths
-----Where location like '%states%'
---where location = 'World'
-----Group By date
---order by 1,2
+
 
 
 -- 3.
